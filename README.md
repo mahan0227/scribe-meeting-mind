@@ -1,6 +1,24 @@
 # Scribe Meeting Mind
 
-**Board-ready meeting records** from raw transcript: themed narrative, dissent-aware decisions, risks with owners, parking lot, and proposed next-meeting prep — richer than quick minutes (see Echo Meeting Mind for a lighter distillation). **BYO OpenAI API key.**
+Produce a **board-ready meeting record** from a transcript: themed narrative, dissent-aware decisions, risks with mitigations and owners, parking lot, and suggested next-meeting prep—richer than quick minutes (see **Echo Meeting Mind** for a lighter distillation).
+
+## What it is
+
+A BYOK Next.js app that treats meetings as **governance artifacts**: not just bullets, but narrative context, explicit disagreement, and operational follow-through fields in JSON.
+
+## Why it’s useful
+
+- Gives **execs and boards** a single readable artifact without hiring a professional scribe every time.
+- Preserves **why** a decision was made and what was **not** decided.
+- Links **risks** to owners and mitigations—not generic “we should be careful.”
+- Seeds **next agenda** so recurring meetings compound instead of reset.
+
+## Where you can use it
+
+- **Boards & committees** — monthly reviews, compensation, audit, risk committees.
+- **Incident command** — postmortem narrative with decisions and dissent.
+- **Program management** — steering committees with multiple stakeholders.
+- **Legal / compliance-heavy** shops where a paper trail matters (still not legal advice).
 
 ## Stack
 
@@ -13,11 +31,22 @@ npm install
 npm run dev
 ```
 
+## Production check
+
+```bash
+npm run build
+npm run start
+```
+
 ## API
 
 `POST /api/scribe` · Header `Authorization: Bearer <key>`
 
-Body: `transcript`, optional `title`, optional `attendees`, optional `model`.
+Body: `transcript` (required), optional `title`, `attendees`, `model`.
+
+## Suite brochure
+
+[`docs/neuron-suite-brochure.html`](docs/neuron-suite-brochure.html) · [`docs/neuron-suite-ig-square.svg`](docs/neuron-suite-ig-square.svg)
 
 ## License
 
